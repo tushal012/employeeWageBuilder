@@ -2,7 +2,8 @@ package combridgelabz;
 
 public class employeeWageBuilder {
     public static void main(String[] args) {
-        int IS_PRESENT = 1;
+        System.out.println("Welcome to Employee Wage Computation");
+
         int IS_PART_TIME = 1;
         int IS_FULL_TIME = 2;
         int  EMP_RATE_PER_HR=20;
@@ -11,14 +12,18 @@ public class employeeWageBuilder {
 
 
         double randomCheck = Math.floor(Math.random() * 10) % 2;
-        if (randomCheck == IS_PART_TIME) {
-            EMP_HR = 4;
-        } else if (randomCheck == IS_FULL_TIME) {
-            EMP_HR= 8;
-        } else {
-            EMP_HR =0;
+        switch ((int) randomCheck) {
+            case 1:
+                EMP_HR = 4;
+                break;
+            case 2:
+                EMP_HR = 8;
+                break;
+            case 3:
+                EMP_HR = 0;
         }
-        salary =(EMP_RATE_PER_HR * EMP_HR);
+
+        salary = EMP_RATE_PER_HR * EMP_HR;
         System.out.println(salary);
     }
 }
